@@ -32,3 +32,27 @@ fetch(`${BASE_URL}/users/5/reservas`)
     console.log(data);
   })
   .catch(err => console.error("Error al obtener reservas:", err));
+
+
+  //4. Eliminar evento
+fetch(`${BASE_URL}/events/4`), {
+    method: "DELETE"
+  }
+    .then(res => res.json())
+    .then(data => {
+      console.log("Evento eliminado:");
+      console.log(data);
+    })
+    .catch(err => console.error("Error al eliminar evento:", err));
+  
+    //5. Eliminar reserva
+fetch(`${BASE_URL}/events/5/reservas/3`), {
+      method: "DELETE"
+    }
+      .then(res => res.json())
+      .then(data => {
+        console.log("Reserva eliminada:");
+        console.log(data);
+      })
+      .catch(err => console.error("Error al eliminar reserva:", err));
+    
